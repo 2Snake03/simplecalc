@@ -1,4 +1,6 @@
-﻿namespace simplecalc;
+﻿using System.Numerics;
+
+namespace simplecalc;
 
 class Program
 {
@@ -21,19 +23,19 @@ class Program
         switch (op)
         {
             case "1":
-                var sum = x + y;
+                Sum();
                 break;
             case "2":
-                var sub = x - y;
+                Subtraction();
                 break;
             case "3":
-                var mult = x * y;
+                Multiplication();
                 break;
             case "4":
-                var divi = x / y;
+                Division();
                 break;
             case "5":
-                var mod = x % y;
+                Modulo();
                 break;
         }
 
