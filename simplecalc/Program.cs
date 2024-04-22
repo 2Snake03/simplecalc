@@ -48,7 +48,9 @@ class Program
                     Modulo(x, y);
                     break;
                 default:
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Niepoprawna opcja. Spróbój ponownie.");
+                    Console.ResetColor();
                     break;
             }  
         }
@@ -57,31 +59,41 @@ class Program
     static void Sum(int x, int y)
     {
         int sum = x + y;
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine($"Wynik dodawania {x} - {y} = {sum}");
+        Console.ResetColor();
     }
 
     static void Subtraction(int x, int y)
     {
         int sub = x - y;
+        Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine($"Wynik odejmowania {x} - {y} = {sub}");
+        Console.ResetColor();
     }
 
     static void Multiplication(int x, int y)
     {
         int mult = x * y;
+        Console.ForegroundColor = ConsoleColor.Blue;
         Console.WriteLine($"Wynik mnożenia {x} * {y} = {mult}");
+        Console.ResetColor();
     }
 
     static void Division(int x, int y)
     {
         int div = x / y;
+        Console.ForegroundColor = ConsoleColor.Magenta;
         Console.WriteLine($"Wynik dzielenia {x} / {y} = {div}");
+        Console.ResetColor();
     }
 
     static void Modulo(int x, int y)
     {
         int mod = x % y;
+        Console.ForegroundColor = ConsoleColor.White;
         Console.WriteLine($"Wynik modulo {x} % {y} = {mod}");
+        Console.ResetColor();
     }
     
 }
