@@ -9,7 +9,7 @@ class Program
         bool run = true;
         while (run)
         {
-            Console.BackgroundColor = ConsoleColor.White;
+        Console.BackgroundColor = ConsoleColor.White;
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.WriteLine("SIMPLECALC");
         Console.Write("Wprowadź pierwszą liczbę x: ");
@@ -21,8 +21,7 @@ class Program
         int x = int.Parse(xs);
         int y = int.Parse(ys);
 
-
-        bool subRun = true;
+       bool subRun = true;
         while (subRun)
         {
             Console.WriteLine("\nWybierz opcję:");
@@ -80,9 +79,7 @@ class Program
         }
         Console.WriteLine("Program zakończony.");
 }
-        
-        
-
+    
     static void Sum(int x, int y)
     {
         int sum = x + y;
