@@ -52,8 +52,20 @@ class Program
                     break;
             }  
         }
-        
-        
-
     }
+    static void Sum()
+    {}
+    
+    static void Subtraction()
+    {}
+    
+    static void Multiplication()
+    {}
+    
+    static void Division()
+    {}
+    
+    static void Modulo()
+    {}
+    
 }
