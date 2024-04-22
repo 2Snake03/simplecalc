@@ -18,7 +18,6 @@ class Program
         int x = int.Parse(xs);
         int y = int.Parse(ys);
 
-        
 
         bool run = true;
         while (run)
@@ -29,7 +28,7 @@ class Program
             Console.WriteLine("3. Pomnóż x * y");
             Console.WriteLine("4. Podziel x / y");
             Console.WriteLine("5. Modulo x % y");
-            var op = Console.ReadLine();
+            string op = Console.ReadLine();
             
             switch (op)
             {
@@ -37,16 +36,16 @@ class Program
                     Sum(x, y);
                     break;
                 case "2":
-                    Subtraction();
+                    Subtraction(x, y);
                     break;
                 case "3":
-                    Multiplication();
+                    Multiplication(x, y);
                     break;
                 case "4":
-                    Division();
+                    Division(x, y);
                     break;
                 case "5":
-                    Modulo();
+                    Modulo(x, y);
                     break;
                 default:
                     Console.WriteLine("Niepoprawna opcja. Spróbój ponownie.");
@@ -58,19 +57,31 @@ class Program
     static void Sum(int x, int y)
     {
         int sum = x + y;
-        Console.WriteLine(sum);
+        Console.WriteLine($"Wynik dodawania {x} - {y} = {sum}");
     }
-    
-    static void Subtraction()
-    {}
-    
-    static void Multiplication()
-    {}
-    
-    static void Division()
-    {}
-    
-    static void Modulo()
-    {}
+
+    static void Subtraction(int x, int y)
+    {
+        int sub = x - y;
+        Console.WriteLine($"Wynik odejmowania {x} - {y} = {sub}");
+    }
+
+    static void Multiplication(int x, int y)
+    {
+        int mult = x * y;
+        Console.WriteLine($"Wynik mnożenia {x} * {y} = {mult}");
+    }
+
+    static void Division(int x, int y)
+    {
+        int div = x / y;
+        Console.WriteLine($"Wynik dzielenia {x} / {y} = {div}");
+    }
+
+    static void Modulo(int x, int y)
+    {
+        int mod = x % y;
+        Console.WriteLine($"Wynik modulo {x} % {y} = {mod}");
+    }
     
 }
