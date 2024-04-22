@@ -18,7 +18,7 @@ class Program
         int x = int.Parse(xs);
         int y = int.Parse(ys);
 
-        var op = Console.ReadLine();
+        
 
         bool run = true;
         while (run)
@@ -29,11 +29,12 @@ class Program
             Console.WriteLine("3. Pomnóż x * y");
             Console.WriteLine("4. Podziel x / y");
             Console.WriteLine("5. Modulo x % y");
+            var op = Console.ReadLine();
             
             switch (op)
             {
                 case "1":
-                    Sum();
+                    Sum(x, y);
                     break;
                 case "2":
                     Subtraction();
@@ -53,8 +54,12 @@ class Program
             }  
         }
     }
-    static void Sum()
-    {}
+
+    static void Sum(int x, int y)
+    {
+        int sum = x + y;
+        Console.WriteLine(sum);
+    }
     
     static void Subtraction()
     {}
