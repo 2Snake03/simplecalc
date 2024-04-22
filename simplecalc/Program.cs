@@ -6,7 +6,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.BackgroundColor = ConsoleColor.White;
+        bool run = true;
+        while (run)
+        {
+            Console.BackgroundColor = ConsoleColor.White;
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.WriteLine("SIMPLECALC");
         Console.Write("Wprowadź pierwszą liczbę x: ");
@@ -19,8 +22,8 @@ class Program
         int y = int.Parse(ys);
 
 
-        bool run = true;
-        while (run)
+        bool subRun = true;
+        while (subRun)
         {
             Console.WriteLine("\nWybierz opcję:");
             Console.WriteLine("1. Dodaj x + y");
@@ -52,9 +55,33 @@ class Program
                     Console.WriteLine("Niepoprawna opcja. Spróbój ponownie.");
                     Console.ResetColor();
                     break;
-            }  
+            }
+
+            Console.WriteLine("\nCzy chcesz kontynuować?");
+            Console.WriteLine("1. Kontynuuj na tych samych liczbach");
+            Console.WriteLine("2. Kontynuuj na nowych liczbach");
+            Console.WriteLine("3. Zamknij program");
+            string opp = Console.ReadLine();
+
+            switch (opp)
+            {
+                case "1":
+                    break;
+                case "2":
+                    subRun = false;
+                    break;
+                case "3":
+                    subRun = false;
+                    run = false;
+                    break;
+            }
+
         }
-    }
+        }
+        Console.WriteLine("Program zakończony.");
+}
+        
+        
 
     static void Sum(int x, int y)
     {
