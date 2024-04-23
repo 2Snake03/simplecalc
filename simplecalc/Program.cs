@@ -84,7 +84,7 @@ class Program
     {
         int sum = x + y;
         Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine($"Wynik dodawania {x} - {y} = {sum}");
+        Console.WriteLine($"Wynik dodawania {x} + {y} = {sum}");
         Console.ResetColor();
     }
 
